@@ -50,13 +50,3 @@ pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 # AI endpoint: POST http://localhost:8000/predict
 ```
-
----
-
-## 🤝 Contributing
-
-- Fork แล้วสร้าง PR มาได้เลย  
-- ใช้ branch ชัดเจน เช่น `feature/ingredient-selector`  
-- ขอ respect coding style ตามที่ตั้งไว้ในโค้ด
-
----
