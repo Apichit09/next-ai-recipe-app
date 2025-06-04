@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI Recipe App
 
-## Getting Started
+โปรเจกต์นี้แบ่งเป็นสองส่วนหลัก  
+1. 🔥 Frontend (Next.js) – โค้ดทั้งหมดอยู่ในโฟลเดอร์ `src`  
+2. 🤖 AI Service (FastAPI) – อยู่ในโฟลเดอร์ `ai-service`
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+- ค้นหาเมนูอาหารจากวัตถุดิบที่มี  
+- แนะนำเมนูแบบ Real-time โดยใช้ AI model  
+- จัดการข้อมูลวัตถุดิบ & เมนู (CRUD) ผ่านหน้า Manage  
+- รองรับการอัปโหลดรูปภาพเมนูและวัตถุดิบ  
+
+---
+
+## 📂 Folder Structure
+
+```
+next-ai-recipe-app/
+├─ src/                 # Next.js frontend & API routes
+│  ├─ app/
+│  ├─ components/
+│  └─ ...
+├─ ai-service/          # FastAPI AI prediction service
+│  ├─ main.py
+│  └─ recipes.json
+└─ README.md            # (you are here)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ⚙️ Setup & Run
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Frontend (Next.js)
 
-## Learn More
+```bash
+cd src
+npm install
+npm run dev
+# เปิด http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 2. AI Service (FastAPI)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+cd ai-service
+pip install -r requirements.txt
+uvicorn main:app --reload --port 8000
+# AI endpoint: POST http://localhost:8000/predict
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🤝 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Fork แล้วสร้าง PR มาได้เลย  
+- ใช้ branch ชัดเจน เช่น `feature/ingredient-selector`  
+- ขอ respect coding style ตามที่ตั้งไว้ในโค้ด
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
